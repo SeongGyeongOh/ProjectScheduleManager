@@ -5,5 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MemoActivity">
+    <TextView
+        android:id="@+id/todoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="해야할 일"/>
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/todoTitle"/>
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        android:text="상세 내용"/>
+    <EditText
+        android:id="@+id/et_detail"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:maxEms="500"
+        android:gravity="top"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail"/>
+    <Button
+        android:id="@+id/btn_timeSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_detail"
+        android:text="알림시간 설정"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:onClick="clickTimeSet"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="확인"
+        android:onClick="clickBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

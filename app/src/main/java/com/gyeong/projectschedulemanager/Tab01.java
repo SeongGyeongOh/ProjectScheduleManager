@@ -43,9 +43,9 @@ public class Tab01 extends Fragment {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
 
-//                Intent intent=new Intent(getContext(), MemoActivity.class);
-//                intent.putExtra("date", date);
-//                startActivity(intent);
+                Intent intent=new Intent(getContext(), MemoActivity.class);
+                intent.putExtra("date", date);
+                startActivity(intent);
 
             }
         });
